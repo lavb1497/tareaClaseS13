@@ -1,0 +1,23 @@
+<div class="container mt-5 item-align-center">
+  <div class="row">
+    <div class="col col-sm-6 d-grid mb-3 mx-auto">
+      <h3 class="text-center mb-3" style="color: rgb(53, 53, 205);">CURRENCY PIPES</h3>
+      <label class="form-label">Valor:</label>
+      <input [(ngModel)]="moneda" type="number" class="form-control text-center" id="exampleFormControlInput1" placeholder="Ingresar cantidad">
+      <div class="dropdown mt-4 text-center">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Selecciona el tipo de moneda
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">USD</a></li>
+          <li><a class="dropdown-item" href="#">EUR</a></li>
+        </ul>
+      </div>
+      <div class="mt-4" style="color: rgb(6, 6, 158);">
+        <p><strong>USD:</strong> {{ moneda | currency }}, <strong>EUR:</strong>{{ moneda | currency:'EUR' }}</p>
+        <p><strong></strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
